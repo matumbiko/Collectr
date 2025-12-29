@@ -8,16 +8,21 @@ import { Link } from "react-router-dom";
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState("");
 
   const handleLogin = async (e) => {
     e.preventDefault();
     setLoading(true);
     setError("");
+      
+    
+
+
 
     // Simulate API call (replace with your backend login)
     setTimeout(() => {
       if (email === "user@example.com" && password === "password123") {
-        onLogin({ email }); // Notify parent component
+        setSuccess("Login successful!"); // Notify parent component
       } else {
         setError("Invalid credentials");
       }
@@ -61,6 +66,7 @@ import { Link } from "react-router-dom";
           style={{ width: "100%", padding: "10px", margin: "10px 0" }}
         />
         {error && <p style={{ color: "red" }}>{error}</p>}
+        {success && <p style={{ color: "blue"}}>{success}</p>}
         <button type="submit" disabled={loading} style={{ padding: "10px 20px" }}>
           {loading ? "Logging in..." : "Login"}
         </button>
