@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import {Link} from "react-router-dom";
 
   import "./Dashboard.css";
+  import  PieChat from "../collectr pages/piechat";
 
 
 
@@ -25,14 +26,14 @@ const Dashboard = () => {
 
 
   return (
-    <div style={{ maxWidth: "800px", margin: "50px auto" }}>
+    <div style={{ maxWidth: "1000px", margin: "50px auto" }}>
       <u><h1>Dashboard</h1></u>
 
       {/* Render StatCards */}
       <Boxes />
      <div className = "profile-corner">
   
-    <img src = "https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg" alt = "Profile" className = "profile-icon"/>
+    <img src = "https://static.vecteezy.com/system/resources/previews/005/544/718/original/profile-icon-design-free-vector.jpg"  alt = "Profile" className = "profile-icon"/>
      <div className = "profile-menu">
       <p>Notifications</p>
       <p>Settings</p>
@@ -64,9 +65,11 @@ const Dashboard = () => {
               <td style={{ border: "1px solid #ddd", padding: "8px" }}>{debtor.balance}</td>
               <td style={{ border: "1px solid #ddd", padding: "8px" }}>{debtor.dueDate}</td>
             
-
+             
               <td style={{ border: "1px solid #ddd", padding: "8px" }}>
+                  <div className = "mark-paid">
                 <button onClick={() => markPaid(debtor.id)}>Mark Paid</button>
+                </div>
               </td>
             </tr>
             
@@ -90,22 +93,35 @@ const Dashboard = () => {
    
   );
 };
-function StatCard({ title, value }) {
+
+function StatCard({ title, value, children }) {
   return (
+     <div style={{ maxWidth: "600px", margin: "50px auto" }}>
     <div className="stat-card">
-      <p className="stat-title">{title}</p>
+      <p className="stat-title"><u>{title}</u></p>
       <h5 className="stat-value">{value}</h5>
+      <h5 className="stat-value">{children}</h5>
+    </div>
     </div>
   );
-};
 
+};
   export function Boxes (){
+    const Monday = 180000;
+    const Tuesday = 70000;
+    const Wednesday= 5039;
+    const Thursday= 3884;
+    const Friday= 2891;
+
   return (
+
     <div className="stats-container">
-     <StatCard title="Total Debtors" value="512" />
+     <StatCard title="Total Debtors" value="512"/>
       <StatCard title="Outstanding Debt" value="ZMW 1,250,000" />
       <StatCard title="Total Collections Today" value="ZMW 15,000" />
-           
+      <StatCard title="Daily Collections">
+        <PieChat Monday={Monday} Tuesday={Tuesday} Wednesday={Wednesday} Thursday={Thursday} Friday={Friday}/>
+      </StatCard>
     </div>
   );
   

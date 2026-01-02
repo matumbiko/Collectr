@@ -1,5 +1,5 @@
 {
-  "homepage":"https://matumbiko.github.io/collectr-react",
+  "homepage": "https://matumbiko.github.io/collectr-react",
   "name": "collectr",
   "version": "0.1.0",
   "private": true,
@@ -8,7 +8,10 @@
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.1",
     "@testing-library/user-event": "^13.5.0",
+    "chart.js": "^4.5.1",
+    "chartjs-plugin-datalabels": "^2.2.0",
     "react": "^19.2.3",
+    "react-chartjs-2": "^5.3.1",
     "react-dom": "^19.2.3",
     "react-router-dom": "^7.11.0",
     "react-scripts": "5.0.1",
@@ -16,8 +19,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages -d build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

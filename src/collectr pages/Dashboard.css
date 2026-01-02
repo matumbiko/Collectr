@@ -1,22 +1,37 @@
 
     .stats-container {
   display: flex;
-  gap: 20px;           /* space between cards */
-  justify-content: space-between;
+  gap: 0;           /* space between cards */
   align-items: stretch;
-  };
+  justify-content: space-between;
+  border-radius: 8px;
+  cursor: pointer;
+};
 
-  .stat-card {
-  background: #ffffff75;
-  padding: 16px;
+  .stat-container s {   /* makes them seperate cards */
+  margin: 0;
+  padding: 8px 12px;
+  border-bottom: 1px solid #000;
+  
+  }
+
+  .stat-card {  /*where all the cards editing i want to do go*/
+  border: 2px solid black;
+  padding: 8px 16px;
   border-radius: 8px;
   flex: 1;               /* makes all cards equal width */
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ background-color: aquamarine;
 }
+.stat-card:hover {
+  transform: translateY(-4px);
+  transition: 0.2s ease;
+}
+
 
 .stat-title {
   color: #555;
   font-size: 14px;
+  font-weight: bold;
 }
 
 .stat-value {
@@ -41,6 +56,10 @@
   object-fit: cover;   /* keeps aspect ratio */
   border: 2px solid #f63b3b; /* optional border color */
 }
+.profile-icon:hover {
+  transform: translateY(-4px);
+  transition: 0.2s ease;
+}
 
 .profile-menu {
   display: none;
@@ -49,7 +68,7 @@
   right: 0px;
   background: #fcfafa;
   border: 1px solid #000;
-  border-radius: 10%;
+  
 }
 
 .profile-menu p {
@@ -57,6 +76,7 @@
   padding: 8px 12px;
   border-bottom: 1px solid #000;
   cursor: pointer;
+  
 }
 
 .profile-menu p:last-child {
@@ -70,6 +90,12 @@
 .profile-menu p:hover {
   background-color: #3B82F6;
   color: white;
-  border-radius: 10%;
+  
 
+}
+
+
+.mark-paid:hover {
+  transform: translateY(-5px);
+  translate: 0.2s ease;
 }
