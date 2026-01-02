@@ -1,0 +1,75 @@
+
+    .stats-container {
+  display: flex;
+  gap: 20px;           /* space between cards */
+  justify-content: space-between;
+  align-items: stretch;
+  };
+
+  .stat-card {
+  background: #ffffff75;
+  padding: 16px;
+  border-radius: 8px;
+  flex: 1;               /* makes all cards equal width */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stat-title {
+  color: #555;
+  font-size: 14px;
+}
+
+.stat-value {
+  margin-top: 8px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profile-corner {
+  position: fixed ;   /* stay in one spot even on scroll */
+  display:  inline-block; /* ensures menu aligns to icon */
+  top: 20px;         /* distance from top */
+  right: 20px;       /* distance from right */
+  z-index: 1000;     /* make sure it’s above other content */
+}
+
+.profile-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;  /* makes it circular */
+   cursor: pointer;
+  object-fit: cover;   /* keeps aspect ratio */
+  border: 2px solid #f63b3b; /* optional border color */
+}
+
+.profile-menu {
+  display: none;
+  position: absolute;
+  top: 55px;
+  right: 0px;
+  background: #fcfafa;
+  border: 1px solid #000;
+  border-radius: 10%;
+}
+
+.profile-menu p {
+  margin: 0;
+  padding: 8px 12px;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+.profile-menu p:last-child {
+  border-bottom: none; /* remove border for the last item */
+}
+
+
+.profile-corner:hover .profile-menu {
+  display: block;
+}
+.profile-menu p:hover {
+  background-color: #3B82F6;
+  color: white;
+  border-radius: 10%;
+
+}
