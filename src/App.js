@@ -6,12 +6,13 @@ import Login from  "./collectr pages/Login";
 function App() {
   return (
     <div>
-      
       {/* Navigation */}
       <nav>
+        
         <Link to="/">Home</Link> |{" "}
         <Link to="/dashboard">Dashboard</Link> |{" "}
         <Link to="/Login">Login</Link>
+          
       </nav>
        {/* Routes */}
       <Routes>

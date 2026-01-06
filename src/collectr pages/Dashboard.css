@@ -99,3 +99,52 @@
   transform: translateY(-5px);
   translate: 0.2s ease;
 }
+
+.return-button:hover {
+transform: translateY(-5px);
+translate: 0.2s ease;
+}
+
+/* Container for search input + button */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;         /* space between input and button */
+  margin: 20px 0;    /* space below stat cards and above table */
+}
+
+/* Input box */
+.search-input {
+  width: 250px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+/* Search button */
+.search-button {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  background-color: #3B82F6;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button:hover {
+  background-color: #2563eb;
+}
+
+.title {
+  position : absolute;
+  left : 10px;
+   top : 50px;
+}
+.pagination{
+  border-radius: 8px;
+}
